@@ -1,13 +1,41 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import counter from './modules/counter.js'
+import * as getters from './getters.js'
+import * as mutations from './mutations.js'
+import * as actions from './actions.js'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     modules: {
         counter
-    }
+    },
+
+    state: {
+        value: 0
+    },
+    getters,
+    actions,
+    mutations
+    //instead of putting these shared resources here
+    //we can put them in separate getters.js, mutations.js and
+    // actions.js files
+    // getters: {
+    //     value: state => {
+    //         return state.value
+    //     }
+    // },
+    // mutations: {
+    //     updateVAlue: (state, payload) => {
+    //         state.value = payload
+    //     }
+    // },
+    // actions: {
+    //     updateValue ({commit}, payload){
+    //         commit('updateValue',payload)
+    //     }
+    // }
 
     //all of the below is now in store/modules/counter.js
     // state: {
