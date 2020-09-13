@@ -18,11 +18,6 @@ import Result from './components/Result.vue'
 import AnotherResult from './components/AnotherResult.vue'
 
 export default {
-  // data () {
-  //   return {
-  //     counter: 0
-  //   }
-  // },
   components: {
     appCounter: Counter,
     appResult: Result,

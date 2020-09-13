@@ -1,8 +1,8 @@
 <template>
   <div>
   <h2>Result</h2>
-  <p>Counter is: {{ this.$store.state.counter }}</p> 
-  <p>Counter is {{counter}}</p>
+  <p>Counter is (not using getter): {{ this.$store.state.counter }}</p> 
+  <p>Double Counter (using getter -- works like computed function) is {{counter}}</p>
   <hr>
   </div>
 
@@ -12,7 +12,7 @@
 export default {
   computed:{
     counter(){
-      return this.$store.state.counter * 2
+      return this.$store.getters.doubleCounter
     }
   }
 }
