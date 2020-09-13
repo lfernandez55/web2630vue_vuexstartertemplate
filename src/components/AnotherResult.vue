@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h2>Result</h2>
+  <h2>Another Result</h2>
   <p>Counter is: {{ this.$store.state.counter }}</p> 
   <p>Counter is {{counter}}</p>
   <hr>
@@ -12,7 +12,7 @@
 export default {
   computed:{
     counter(){
-      return this.$store.state.counter * 2
+      return this.$store.state.counter
     }
   }
 }
