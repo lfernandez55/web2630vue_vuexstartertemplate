@@ -22,5 +22,18 @@ export const store = new Vuex.Store({
         decrement: state => {
             state.counter--
         }
+    },
+    actions: {
+        // increment: context => {
+        //     //context gives us access to commit dispatch state and getters
+        //     context.commit('increment')
+        // }
+        //the below is the same as above but better when u just want to use commit:
+        increment: ({commit}) => {
+            commit('increment')
+        },
+        decrement: ({commit}) => {
+            commit('decrement')
+        }
     }
 })

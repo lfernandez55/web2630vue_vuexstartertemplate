@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Another Counter (using mapped mutations)</h2>
+    <h2>Another Counter (using mapped actions)</h2>
     <button
       class="btn btn-primary"
       @click="increment"
@@ -13,14 +13,17 @@
 </template>
 
 <script>
-import {mapMutations} from 'vuex'
+// import {mapMutations} from 'vuex'
+import {mapActions} from 'vuex'
+
+
 export default {
   methods: {
-      ...mapMutations([
-          'increment',
-          'decrement' 
-          ////the above are whatever they are called in store.js/mutations
-      ])
+    //   ...mapMutations([
+    //       'increment',
+    //       'decrement' 
+    //       ////the above are whatever they are called in store.js/mutations
+    //   ])
 
     // increment () {
     //   this.$store.commit('increment')
@@ -28,6 +31,12 @@ export default {
     // decrement () {
     //   this.$store.commit('decrement')
     // }
+      ...mapActions([
+          'increment',
+          'decrement' 
+          ////the above are whatever they are called in store.js/mutations
+      ])
+
   }
 }
 </script>
