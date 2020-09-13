@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import counter from './modules/counter.js'
+import foo from './modules/foo.js'
 import * as getters from './getters.js'
 import * as mutations from './mutations.js'
 import * as actions from './actions.js'
@@ -9,11 +10,14 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     modules: {
-        counter
+        counter,
+        foo
     },
 
     state: {
         value: 0
+        // ,
+        // counterx: 0
     },
     getters,
     actions,

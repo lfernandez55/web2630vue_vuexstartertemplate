@@ -9,6 +9,10 @@
       class="btn btn-primary"
       @click="decrement"
     >Decrement</button>
+        <button
+      class="btn btn-primary"
+      @click="changeIt('SNOOZER')"
+    >ChangeIt</button>
   </div>
 </template>
 
@@ -33,7 +37,8 @@ export default {
     // }
       ...mapActions([
           'increment',
-          'decrement' 
+          'decrement',
+          'changeIt' 
           ////the above are whatever they are called in store.js/mutations
       ])
 
