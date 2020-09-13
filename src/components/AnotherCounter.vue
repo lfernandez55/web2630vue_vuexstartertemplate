@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2>Another Counter (using mapped actions)</h2>
+    <h2>Another Counter (using mapped actions -- actions are only really used when making an api call)</h2>
     <button
       class="btn btn-primary"
-      @click="increment"
+      @click="increment(50)"
     >Increment</button>
     <button
       class="btn btn-primary"

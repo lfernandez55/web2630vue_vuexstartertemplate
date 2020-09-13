@@ -16,8 +16,8 @@ export const store = new Vuex.Store({
         }
     },
     mutations: {
-        increment: state => {
-            state.counter++
+        increment: (state,arg) => {
+            state.counter = state.counter + arg;
         },
         decrement: state => {
             state.counter--
@@ -29,8 +29,8 @@ export const store = new Vuex.Store({
         //     context.commit('increment')
         // }
         //the below is the same as above but better when u just want to use commit:
-        increment: ({commit}) => {
-            commit('increment')
+        increment: ({commit}, arg) => {
+            commit('increment', arg)  // this means run the mutation method named 'increment'
         },
         decrement: ({commit}) => {
             commit('decrement')
