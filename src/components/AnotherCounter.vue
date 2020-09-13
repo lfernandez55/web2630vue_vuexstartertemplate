@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Counter</h2>
+    <h2>Another Counter</h2>
     <button
       class="btn btn-primary"
       @click="increment"
@@ -16,10 +16,10 @@
 export default {
   methods: {
     increment () {
-      this.$store.state.counter++
+      this.$store.commit('increment')
     },
     decrement () {
-      this.$store.state.counter--
+      this.$store.commit('decrement')
     }
   }
 }

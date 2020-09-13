@@ -14,5 +14,13 @@ export const store = new Vuex.Store({
         stringThing: state => {
             return state.counter + " Hoky Pokey"
         }
+    },
+    mutations: {
+        increment: state => {
+            state.counter++
+        },
+        decrement: state => {
+            state.counter--
+        }
     }
 })
